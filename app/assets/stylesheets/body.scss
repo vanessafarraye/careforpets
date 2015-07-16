@@ -54,3 +54,13 @@ small.color {
 a.click_here:hover {
 	color: #48A497;
 } 
+
+.navbar-inverse .navbar-nav > li.active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  color: #48A497;
+  background-color: rgba(173, 234, 224, 0.4);
+}
+
+.navbar-inverse .navbar-nav > li.active > a:hover, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  
+  background-color: rgba(173, 234, 224, 0.4);
+}
