@@ -1,0 +1,61 @@
+<div class="container" id="content">
+  <% if current_user == @user%>
+  <div class="row">
+    <div class="col-md-5">  
+      <h2><small class="color">Welcome, <%= @user.first_name %></small></h2>
+    </div>
+  </div> 
+
+  <div class="row">
+    <div class="col-md-5">
+      <div id="picture">
+  	   <%= gravatar_for @user %>
+      </div>
+      <div class="outside-links">
+        <%= link_to "Edit your profile picture", "https://secure.gravatar.com/", :target => "_blank", :class => "click_here" %>
+      </div>
+      <h5><b>First Name:</b> <%=@user.first_name %> </h5>          
+      <h5><b>Last Name:</b> <%=@user.last_name %></h5>
+      <h5><b>City: </b> <%=@user.city %></h5>
+    </div>
+
+    <div class="col-md-6" >
+        <h2><small  class="color">Your donations</small></h2>
+        <table class="reference" style="width:100%">
+        <tr>
+          <th>Date</th>
+          <th>Transaction</th>
+          <th>Amount</th>
+          <th>Patient</th>    
+        </tr>
+        <% @user.donations.each do |donation| %>
+        <tr>
+          <td><%=  "#{donation.created_at.strftime("%m/%d/%Y")}" %></td>
+          <td><%= "#{donation.transaction_id}" %></td>
+          <td><%=  "$#{donation.amount}" %></td> 
+          <td><%= link_to donation.client.name, client_path(donation.client), :class => "click_here" %></td>   
+        </tr>
+        <% end %>
+        </table>
+        <h2><small  class="color">Your patients</small></h2>
+        <% @user.clients.each_slice(3) do |slice| %>
+          <div class="row" id="pets">
+          <% slice.each do |client| %>
+            <div class="col-md-4" id="div_pets">
+              <div class="thumbnail" id="user_pets">
+                <p><%= client.name %></p>
+                <%= link_to image_tag(client.photo_url, :class => "client_img_user"), client_path(client) %>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+        </div>
+      </div>
+    </div>
+
+    <% else %>
+      <script type="text/javascript">
+        window.location.href="/welcome"  // put your correct path in a string here
+      </script>
+  <% end %>
+</div>

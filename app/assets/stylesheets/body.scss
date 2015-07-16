@@ -1,0 +1,56 @@
+
+
+nav#nav {
+	background-color: rgba(73,188,170,0.4);
+	border-color: #48A497;
+}
+
+.navbar-inverse a.navbar-brand {
+  color: #48A497;
+}
+
+.navbar-inverse ul.navbar-nav > li > a {
+  color: #48A497;
+}
+
+.open .dropdown-menu > li > a {
+	color: #48A497;
+}
+
+.open .dropdown-menu > li > a:hover {
+	background-color: #48A497;
+  color: #fff;
+}
+.navbar-right .dropdown-menu >li {
+	color: #48A497;
+}
+
+img {
+	height: 150px;
+	width: 200px;
+}
+
+.row#pictures {
+	margin-left: 10px;
+}
+
+.row#donations {
+	margin-top: 50px;
+	text-align: center;
+}
+.navbar-inverse .navbar-collapse .navbar-nav > .open > a.dropdown-toggle, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #48A497;
+  color: #fff;
+}
+
+small.color {
+	color: #48A497;
+}
+
+.click_here {
+	color: #48A497;
+}
+
+a.click_here:hover {
+	color: #48A497;
+} 

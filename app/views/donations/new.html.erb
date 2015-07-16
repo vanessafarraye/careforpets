@@ -1,0 +1,21 @@
+<div class="container" id="content">
+	<div class="row" id="donations">
+		<%=image_tag(@client.photo_url, :class => "client_image2") %>
+		<h5><b><u>Age:</b></u> <%=@client.age %></h5>
+		<h5><b><u>Owner's name:</b></u> <%=@client.owners_name %> </h5>
+		<h5><b><u>Amount of money needed:</b></u> $<%= @amount_needed %></h5>
+		<h5><b><u>Donations received:</b></u> $<%= @existing_donations %></h5>
+
+		<% if @amount_needed > 0 %>
+	
+			<%= form_tag client_donations_path(@client) do %>
+	  		<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+	          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+	          data-description="A month's subscription"
+	          data-amount="<%= @donation_amount %>"></script>
+	  		<%= hidden_field_tag 'donation_amount', @donation_amount %>
+
+			<% end %>
+		<% end %>
+	</div>
+</div>

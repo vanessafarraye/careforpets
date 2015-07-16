@@ -1,0 +1,20 @@
+<div class="container" id="content">
+    <h2><small class="color">Patients</small></h2>
+    <% @clients.each_slice(3) do |slice| %>
+        <div class="row" id="pets">
+          <% slice.each do |client| %>
+            <div class="col-md-4" id="pets">
+            <div class="thumbnail" id="pets">
+              <%= link_to image_tag("#{client.photo_url}", :class => "client_image"), client_path(client) %>
+              <h3><%= "#{client.name}" %></h3>
+							<h5><b>Amount of money needed:</b> $<%= client.amount_needed - @all_donations[client.id] %></h5>
+							<h5><b>Amount of money received:</b> $<%= @all_donations[client.id] %></h5>
+							<h5><b>Need treatment before:</b> <%= client.date_expect %></h5>
+							<p> <%= link_to "Click here", client_path(client), :class => "click_here" %>  or on the picture to learn more about this patient. </p>
+              
+            </div>
+        </div>
+          <% end %>
+        </div>
+        <% end %>
+</div>

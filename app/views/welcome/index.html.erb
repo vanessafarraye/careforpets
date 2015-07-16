@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Care for pets</title>
+</head>
+<body>
+
+<div class="container" id="content">
+	<div id="box">
+		<h1><small class="color">Welcome to Care For Pets</small></h1>
+		<p id="splashPar"></p>	
+	</div>
+</div>	
+	<div class="row" id="pictures">
+		<img src="https://newevolutiondesigns.com/images/freebies/animals-background-7.jpg">
+		<img src="http://i.huffpost.com/gen/1371078/images/o-SMILING-ANIMAL-facebook.jpg">
+		<img src="http://cdn.wallwuzz.com/uploads/images-animals-animal-wonderful-array-wallwuzz-hd-wallpaper-3021.jpg">
+		<img src="http://img.xcitefun.net/users/2012/05/295925,xcitefun-awesome-baby-animals-10.jpg">
+		<img src="http://www.godvine.com/pics/animal-babies/animal-babies2.jpg">
+		<img src="http://i.ytimg.com/vi/iQBWFbDz9JI/hqdefault.jpg">
+		<img src="http://udel.edu/~emmaauf/website%20project/final%20webpage/farmanimals/images/pig.jpeg">
+
+		<img src="http://www.freelargeimages.com/wp-content/uploads/2015/01/Cute_Baby_Animals_03.jpg">
+		<img src="http://images1.fanpop.com/images/photos/2200000/Horse-domestic-animals-2256748-1280-1024.jpg">
+		<img src="http://www.pageresource.com/wallpapers/wallpaper/widescreen-animals-parrots-parrot-blue_391536.jpg">
+		<img src="http://d3u5xmnnxiuz0w.cloudfront.net/wp-content/uploads/2013/03/overdose-of-cuteness-12.jpg">
+		<img src="http://resources2.news.com.au/images/2009/04/08/1225702/974506-endangered-animals.jpg">
+		<img src="http://www.adventure-journal.com/wp-content/uploads/2013/07/adventure_journal_cute_wild_baby_animals_05.jpg">
+		<img src="http://notesofafilmfanatic.com/wp-content/uploads/2015/02/404720-baby-farm-animals-piglet-and-lamb.jpg">
+
+		<img src="http://cdn.playbuzz.com/cdn/75cfb7d7-0b84-4ed5-8b6b-274def97e967/9c983424-a10f-43ce-9dfa-aa8ffb5d3126.jpg">
+		<img src="http://images6.fanpop.com/image/photos/32800000/Animals-teddybear64-32833751-1024-768.jpg">
+		<img src="http://cdn.animals-pics.com/pictures/www.widescreenhdwallpapers.com/wp-content/uploads/2012/12/Animal-Grass-Dogs-Puppies-HD-Wallpaper-1080p.jpg">
+		<img src="http://i415.photobucket.com/albums/pp236/Keefers_/Keefers_Beautiful%20Animals/Keefers_BeautifulAnimals2027.jpg">
+		<img src="http://boredomfiles.com/wp-content/uploads/2015/04/01-animals-riding-other-animals.jpg">
+		<img src="http://www.animalspot.net/wp-content/uploads/2012/02/Bald-Eagle-Images1.jpg">
+		<img src="http://www.onegreenplanet.org/wp-content/uploads/2010/10/2014/02/animals_in_love-tumblr-3.jpg">
+
+		<img src="https://shechive.files.wordpress.com/2011/01/cute-animals-4.jpg">
+		<img src="http://images.fanpop.com/images/image_uploads/animals--the-animal-kingdom-248733_1024_768.jpg">
+		<img src="http://pozadine.info/wp-content/uploads/2013/09/Vjeverica-jede-%C5%BEir.jpg">
+		<img src="http://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals-2/cute-baby-animals-2-2.jpg">
+		<img src="http://www.pageresource.com/wallpapers/wallpaper/animals-kissing-parrots-sizes.jpg">
+		<img src="http://forums.au.reachout.com/t5/image/serverpage/image-id/941i6385EB477719EC2A?v=mpbl-1">
+		<img src="http://animals.ekstrax.com/wp-content/uploads/2013/09/white-animals-3.jpg">
+	</div>
+<div class="container" id="content">
+	<div class="row">
+		<div class="col-md-4">
+			<h2><small class="color">About us</small></h2>
+			<p class="text-justify"> Care For Pets is a web-app created by Vanessa Farraye, student at General Asssembly's Web Development Immersive Program in San Francisco. The reason I was motivated to create this app was to help animals in need of medical assistance.</p>
+			<p>It's amazing the power of what we can accomplish if we all work together and why not rally around helping a living being in need.</p>
+		</div>
+
+		<div class="col-md-4">
+			<h2><small class="color">How it works?</small></h2>
+			<p class="text-justify">People like you can help save an animal's life by donating money to those who can't afford to pay for their pet's surgery or treatment. Every penny counts and all help is appreciated.</p>
+			<p>Using the crowdfunding model, we're trying to create an active support community that can help in those dire situations.</p> 
+		</div>
+		<div class="col-md-4">
+			<h2><small class="color">Contact us</small></h2>
+			<p>Care for pets was created as part of a class project, but I'm motivated to see this platform become a reality. If you're interested in getting involved and helping out with this project, I'd love to hear from you. Feel free to drop us a line.</p>
+			<p>vane_farraye@hotmail.com</p>
+		</div>
+	</div>
+</div>
+	
+	<!-- signup -->
+	<div id="signup-form" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+   
+	    
+
+   
+	      <!-- Signup form start -->
+
+	      <%= form_for @user, html: {class: "form-horizontal form-top"} do |f| %>
+			  <div class="form-group">
+			    <label for="inputName3" class="col-sm-2 control-label">First name</label>
+		    	<div class="col-sm-10">
+			    		<%= f.text_field :first_name, placeholder: "First Name", class: "form-control" %>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputUserName3" class="col-sm-2 control-label">Last Name</label>
+			    <div class="col-sm-10">			  
+			    	<%= f.text_field :last_name, placeholder: "Last Name", class: "form-control" %>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+			    <div class="col-sm-10">			  
+			    	<%= f.text_field :email, placeholder: "Email", type: "email", class: "form-control" %>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+			    <div class="col-sm-10">
+			    	<%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword3" class="col-sm-2 control-label">Confirm Password</label>
+			    <div class="col-sm-10">
+			    	<%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: "form-control" %>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			  		<%= f.submit "Sign Up", class: "btn btn-default" %>
+			    </div>
+			  </div>
+				<% end %>    
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Login -->
+	<div id="login-form" class="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	      <!-- Login form start -->
+
+	      <%= form_for @user, html: {class: "form-horizontal form-top"}, url: "/sessions", method: "post" do |f| %>
+			  
+			  <div class="form-group">
+			    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+			    <div class="col-sm-10">
+			      <%= f.text_field :email, placeholder: "Email", type: "email", class: "form-control" %>
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+			    <div class="col-sm-10">
+			    	<%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			    	<%= f.submit "Sign In", class: "btn btn-default" %>			     
+			    </div>
+			  </div>	          	       	  
+	      <% end %> 
+
+
+	    </div>
+	  </div>
+	</div>
+
+
+
+
+</body>
+</html>
+
+
+

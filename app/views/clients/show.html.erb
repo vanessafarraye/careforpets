@@ -1,0 +1,67 @@
+<div class="container" id="content">
+	<div class="row">
+		<div class="col-md-5">
+			<h2><small class="color"> <%=@client.name %> </small></h2>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-5">
+			 <%=image_tag(@client.photo_url, :class => "client_image2") %>
+			<h5><b><u>Age:</u></b> <%=@client.age %></h5>
+			<h5><b><u>Owner's name:</u></b> <%=@client.owners_name %> </h5>
+			<h5><b><u>Amount of money needed:</u></b> $<%= @amount_needed %></h5>
+			<h5><b><u>Donations received:</u></b> $<%= @existing_donations %></h5>
+			<% if @amount_needed > 0 %>
+			<article>
+				<label class="amount">
+						<%= form_tag new_client_donation_path(@client.id), 
+						method: :get do %>
+						<%= label_tag :donation, "$" %>
+						<%= text_field_tag :donation %>
+						<%= submit_tag("Donate") %>
+						<% end %>
+				</label>
+			</article>
+			<% end %>
+			<% if @client.user_id == current_user.id %> 
+			<%= link_to "Edit", edit_client_path(@client) %> |
+			<%= link_to "delete", @client, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+      <% end %>                            
+		</div>
+
+		<div class="col-md-5">
+			
+			<canvas id="donations" width="300" height="150"></canvas>
+			<script type="text/javascript">
+            var pieData = [
+                {
+                    value: <%= @amount_needed %>,
+                    color:"#48A497"
+                },
+                {
+                    value : <%= @existing_donations %>,
+                    color : "rgba(73,188,170,0.4)"
+                }
+            ];
+            // pie chart options
+            var pieOptions = {
+                 segmentShowStroke : false,
+                 animateScale : true
+            }
+            // get pie chart canvas
+            var donations= document.getElementById("donations").getContext("2d");
+            // draw pie chart
+            new Chart(donations).Pie(pieData, pieOptions);
+			</script>
+			<ul>
+				<li id="needed"><span>Amount needed</span></li>
+				<li id="donations"><span>Donations received</span></li>
+			</ul>
+			<div class="text-justify">
+				<%=@client.story %>
+			</div>  
+		</div>
+	</div>	
+</div>
