@@ -22,7 +22,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+# gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
@@ -31,7 +31,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass', '~> 3.3.4'
 
 # bootswatch
-gem 'bootswatch-rails'
+# gem 'bootswatch-rails'
 
 # gem 'therubyracer', platforms: :ruby
 gem 'pry-rails'
@@ -43,7 +43,7 @@ gem 'stripe'
 gem 'figaro'
 
 # Use Unicorn as the app server
-gem 'unicorn'
+# gem 'unicorn'
 
 gem 'chart-js-rails'
 # Use Capistrano for deployment
